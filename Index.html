@@ -64,7 +64,7 @@
         var resultBox = document.getElementById("resultBox");
         let i;
 
-        function processFiles(searchTerm = "") {
+        function prProcessFiles(searchTerm = "") {
             resultBox.value = "";
             var noListFiles = "";
             var contar = 0;
@@ -92,7 +92,7 @@
             ListFiles.pop();// Eliminar el último elemento vacío
         }
 
-        function fnGenerarArbol(lista) {
+        function fnGenerateTree(lista) {
             const arbol = {};
             lista.forEach((archivo) => {
                 const ruta = archivo.split("/");
@@ -122,8 +122,8 @@
         }
 
         generateButton.addEventListener("click", function () {
-            processFiles("");
-            const arbolGenerado = fnGenerarArbol(ListFiles);
+            prProcessFiles("");
+            const arbolGenerado = fnGenerateTree(ListFiles);
             const salida = fnConvertToString(arbolGenerado);
             resultBox.value = salida;
         });
