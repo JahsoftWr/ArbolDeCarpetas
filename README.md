@@ -1,6 +1,5 @@
 
-
-<a href="https://jahsoftwr.github.io/ArbolDeCarpetas/Index.html" target="_blank" rel="noreferrer"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/html5/html5-original.svg" alt="html5" width="40" height="40"/></a>
+<a href="https://jahsoftwr.github.io/ArbolDeCarpetas/Index.html">PROBAR</a>:bookmark_tabs:
 
 <h1 align="center">Generar un árbol de directorios.</h1>
 <p align="center"><i>Este código permite a un usuario seleccionar archivos, generar un árbol de directorios y visualizarlo en formato de texto, mostrando la jerarquía de carpetas y archivos con este formato:</i></p>
@@ -27,272 +26,30 @@ Prueba
                 └── Documento.txt
 ```
 
-## Contents
-  - [Función processFiles](#github-readme-profile-category)
-  - [Función fnGenerarArbol](#list-out-awesome-readme-profile-tools)
-  - [Función fnConvertirAString](#list-out-awesome-readme-profile-articles)
-  - [Contribute](#contribute)
+## CODE
+
+- [Función prProcessFiles](#fnconverttostring)
+- [Función fnGenerateTree](#fngeneratetree)
+- [Función fnConvertToString](#fnconverttostring)
+- [Contributing](#contributing)
 
 
-# List out `Awesome README Profile` Tools
+## fnconverttostring
 
-Función processFiles:
+<h1>Función prProcessFiles:</h1>
+
 procesa la lista de archivos y los muestra en un formato de árbol de directorios.
 
-Función fnGenerarArbol:
+## fngeneratetree</h1>
+
+<h1>Función fnGenerateTree:</h1>
+
 Toma una lista de archivos y crea un objeto que representa un árbol de directorios y devuelve el árbol generado.
 
+## fnconverttostring</h1>
 
-Función fnConvertirAString:
+<h1>Función fnConvertToString:</h1>
+
 La función fnConvertirAString toma un objeto que representa un árbol de directorios y lo convierte en una cadena de texto con sangría que representa la estructura del árbol.
 Devuelve la cadena de salida con el árbol en formato de texto.
-
-
-
- - [List out `Awesome README Profile` Tools](#list-out-awesome-readme-profile-tools)
-
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-
-
-## Github README PROFILE CATEGORY
-
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSSSSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSSSSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSSSSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSSSSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-SSSSSSS
-SSSSSSS
-SSSSSSSSS
-
-SSSSSSSSSSSSSS
-
-
 
