@@ -1,0 +1,135 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="icon" type="image/x-icon" href="images/favicon.ico">
+    <title>Buscar 06</title>
+
+    <style>
+        .container {
+            display: flex;
+            flex-direction: column;
+            margin: 0 auto;
+            width: 100%;
+            height: 100%;
+        }
+
+        label,
+        textarea {
+            font-size: 0.8rem;
+            letter-spacing: 1px;
+        }
+
+        textarea {
+            padding: 10px;
+            max-width: 90%;
+            height: 500px;
+            line-height: 1.5;
+            border-radius: 5px;
+            border: 1px solid #ccc;
+            box-shadow: 1px 1px 1px #999;
+        }
+
+        label {
+            display: block;
+            margin-bottom: 10px;
+            font-weight: bold;
+        }
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+        <label for="story">GENERAR ARBOL:</label>
+        <div class="box files">
+            <input type="file" name="files" webkitdirectory directory id="files" multiple />
+        </div>
+        <hr>
+        <div class="box generateButton">
+            <button id="generateButton">GENERAR ARBOL</button>
+        </div>
+        <hr>
+        <textarea id="resultBox" name="resultBox" rows="5" cols="33">Los resultados aparecerán aquí...</textarea>
+    </div>
+
+    <script>
+        var ListFiles = [];
+        //var ListFiles = ['Prueba/Documento.txt','Prueba/Carpeta03/CarpetaC1/Documento.txt','Prueba/Carpeta03/CarpetaC1/CarpetaC1_Sub1/Documento.txt','Prueba/Carpeta03/CarpetaC1/CarpetaC1_Sub1/CarpetaC1_SubSub1/Documento.txt','Prueba/Carpeta02/ArchivoCar02_A.txt','Prueba/Carpeta02/CarpetaB2/ArchivoCarpetaB2_A.txt','Prueba/Carpeta02/CarpetaB1/ArchivoCarpetaB1_A.txt','Prueba/Carpeta02/CarpetaB1/ArchivoCarpetaB1_B.txt','Prueba/Carpeta01/ArchivoCar01_A.txt','Prueba/Carpeta01/ArchivoCar01_B.txt','Prueba/Carpeta01/ArchivoCar01_C.txt'];
+        var inp = document.getElementById("files");
+        var generateButton = document.getElementById("generateButton");
+        var resultBox = document.getElementById("resultBox");
+        let i;
+
+        function processFiles(searchTerm = "") {
+            resultBox.value = "";
+            var noListFiles = "";
+            var contar = 0;
+            let currentFolder = "";
+
+            for (i = 0; i < inp.files.length; i++) {
+                let file = inp.files[i];
+                let filePath = file.webkitRelativePath;
+                let folder = filePath.split("/")[0];
+
+                if (folder !== currentFolder) {
+                    currentFolder = folder;
+                    //resultBox.value += "\n" + folder + "\n";
+                }
+                //Solo si usa filtro
+                if (searchTerm && !filePath.toLowerCase().includes(searchTerm)) {
+                    continue;
+                }
+                resultBox.value += filePath + "\n";
+                noListFiles = filePath + "?" + noListFiles;
+            }
+            noListFiles += "listar";
+            console.log(noListFiles);
+            ListFiles = noListFiles.split("?");// Convertir la cadena a un array
+            ListFiles.pop();// Eliminar el último elemento vacío
+        }
+
+        function fnGenerarArbol(lista) {
+            const arbol = {};
+            lista.forEach((archivo) => {
+                const ruta = archivo.split("/");
+                let nodoActual = arbol;
+                for (let i = 0; i < ruta.length; i++) {
+                    if (!nodoActual.hasOwnProperty(ruta[i])) {
+                        nodoActual[ruta[i]] = i === ruta.length - 1 ? { archivo: ruta[i] } : {};
+                    }
+                    nodoActual = nodoActual[ruta[i]];
+                }
+            });
+            return arbol;
+        }
+
+        // Convertir el árbol a un string con formato de árbol
+        function fnConvertirAString(arbol, nivel = 0) {
+            let salida = "";
+            for (const key in arbol) {
+                if (arbol[key].hasOwnProperty("archivo")) {
+                    salida += `${" ".repeat(nivel * 2)}├── ${arbol[key].archivo}\n`;
+                } else {
+                    salida += `${" ".repeat(nivel * 2)}├── ${key}\n`;
+                    salida += fnConvertirAString(arbol[key], nivel + 1);
+                }
+            }
+            return salida;
+        }
+
+        generateButton.addEventListener("click", function () {
+            processFiles("");
+            const arbolGenerado = fnGenerarArbol(ListFiles);
+            const salida = fnConvertirAString(arbolGenerado);
+            resultBox.value = salida;
+        });
+
+    </script>
+
+</body>
+
+</html>
