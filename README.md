@@ -38,9 +38,56 @@ Prueba
 
 procesa la lista de archivos y los muestra en un formato de árbol de directorios.
 
+```
+  function prProcessFiles(searchTerm = "") {
+            resultBox.value = "";
+            var noListFiles = "";
+            var contar = 0;
+            let currentFolder = "";
+
+            for (i = 0; i < inp.files.length; i++) {
+                let file = inp.files[i];
+                let filePath = file.webkitRelativePath;
+                let folder = filePath.split("/")[0];
+
+                if (folder !== currentFolder) {
+                    currentFolder = folder;
+                    //resultBox.value += "\n" + folder + "\n";
+                }
+                //Solo si usa filtro
+                if (searchTerm && !filePath.toLowerCase().includes(searchTerm)) {
+                    continue;
+                }
+                resultBox.value += filePath + "\n";
+                noListFiles = filePath + "?" + noListFiles;
+            }
+            noListFiles += "listar";
+            console.log(noListFiles);
+            ListFiles = noListFiles.split("?");// Convertir la cadena a un array
+            ListFiles.pop();// Eliminar el último elemento vacío
+        }
+```
+
 ## fngeneratetree</h1>
 
 Toma una lista de archivos y crea un objeto que representa un árbol de directorios y devuelve el árbol generado.
+
+```
+ function fnGenerateTree(lista) {
+            const arbol = {};
+            lista.forEach((archivo) => {
+                const ruta = archivo.split("/");
+                let nodoActual = arbol;
+                for (let i = 0; i < ruta.length; i++) {
+                    if (!nodoActual.hasOwnProperty(ruta[i])) {
+                        nodoActual[ruta[i]] = i === ruta.length - 1 ? { archivo: ruta[i] } : {};
+                    }
+                    nodoActual = nodoActual[ruta[i]];
+                }
+            });
+            return arbol;
+        }
+```
 
 ## fnconverttostring</h1>
 
