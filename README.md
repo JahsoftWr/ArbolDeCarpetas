@@ -23,6 +23,16 @@ Prueba
             └── CarpetaC1_SubSub1
                 └── Documento.txt
 ```
+
+## Contents
+  - [Función processFiles](#github-readme-profile-category)
+  - [Función fnGenerarArbol](#list-out-awesome-readme-profile-tools)
+  - [Función fnConvertirAString](#list-out-awesome-readme-profile-articles)
+  - [Contribute](#contribute)
+
+
+# List out `Awesome README Profile` Tools
+
 Función processFiles:
 procesa la lista de archivos y los muestra en un formato de árbol de directorios.
 
@@ -33,4 +43,19 @@ Toma una lista de archivos y crea un objeto que representa un árbol de director
 Función fnConvertirAString:
 La función fnConvertirAString toma un objeto que representa un árbol de directorios y lo convierte en una cadena de texto con sangría que representa la estructura del árbol.
 Devuelve la cadena de salida con el árbol en formato de texto.
+
+
+
+ - [List out `Awesome README Profile` Tools](#list-out-awesome-readme-profile-tools)
+
+
+SSSSSSSSSSSSSS
+SSSSSSS
+SSSSSSS
+SSSSSSSSS
+
+
+## Github README PROFILE CATEGORY
+
+
 
