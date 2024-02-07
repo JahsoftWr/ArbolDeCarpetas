@@ -108,14 +108,14 @@
         }
 
         // Convertir el árbol a un string con formato de árbol
-        function fnConvertirAString(arbol, nivel = 0) {
+        function fnConvertToString(arbol, nivel = 0) {
             let salida = "";
             for (const key in arbol) {
                 if (arbol[key].hasOwnProperty("archivo")) {
                     salida += `${" ".repeat(nivel * 2)}├── ${arbol[key].archivo}\n`;
                 } else {
                     salida += `${" ".repeat(nivel * 2)}├── ${key}\n`;
-                    salida += fnConvertirAString(arbol[key], nivel + 1);
+                    salida += fnConvertToString(arbol[key], nivel + 1);
                 }
             }
             return salida;
@@ -124,7 +124,7 @@
         generateButton.addEventListener("click", function () {
             processFiles("");
             const arbolGenerado = fnGenerarArbol(ListFiles);
-            const salida = fnConvertirAString(arbolGenerado);
+            const salida = fnConvertToString(arbolGenerado);
             resultBox.value = salida;
         });
 
