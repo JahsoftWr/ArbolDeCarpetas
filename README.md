@@ -36,19 +36,13 @@ Prueba
 
 ## fnconverttostring
 
-<h1>Función prProcessFiles:</h1>
-
 procesa la lista de archivos y los muestra en un formato de árbol de directorios.
 
 ## fngeneratetree</h1>
 
-<h1>Función fnGenerateTree:</h1>
-
 Toma una lista de archivos y crea un objeto que representa un árbol de directorios y devuelve el árbol generado.
 
 ## fnconverttostring</h1>
-
-<h1>Función fnConvertToString:</h1>
 
 La función fnConvertirAString toma un objeto que representa un árbol de directorios y lo convierte en una cadena de texto con sangría que representa la estructura del árbol.
 Devuelve la cadena de salida con el árbol en formato de texto.
