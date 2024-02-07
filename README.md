@@ -94,3 +94,18 @@ Toma una lista de archivos y crea un objeto que representa un árbol de director
 La función fnConvertirAString toma un objeto que representa un árbol de directorios y lo convierte en una cadena de texto con sangría que representa la estructura del árbol.
 Devuelve la cadena de salida con el árbol en formato de texto.
 
+```
+function fnConvertToString(arbol, nivel = 0) {
+            let salida = "";
+            for (const key in arbol) {
+                if (arbol[key].hasOwnProperty("archivo")) {
+                    salida += `${" ".repeat(nivel * 2)}├── ${arbol[key].archivo}\n`;
+                } else {
+                    salida += `${" ".repeat(nivel * 2)}├── ${key}\n`;
+                    salida += fnConvertToString(arbol[key], nivel + 1);
+                }
+            }
+            return salida;
+        }
+
+```
