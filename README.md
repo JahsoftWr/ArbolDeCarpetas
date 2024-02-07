@@ -1,5 +1,5 @@
 Este código permite a un usuario seleccionar archivos, generar un árbol de directorios y visualizarlo en formato de texto, mostrando la jerarquía de carpetas y archivos con este formato:
-
+```
 Prueba
 ├── Carpeta01
 │   ├── ArchivoCar01_A.txt
@@ -19,7 +19,7 @@ Prueba
             ├── Documento.txt
             └── CarpetaC1_SubSub1
                 └── Documento.txt
-
+```
 Función processFiles:
 procesa la lista de archivos y los muestra en un formato de árbol de directorios.
 
